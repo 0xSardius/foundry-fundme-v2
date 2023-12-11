@@ -20,6 +20,7 @@ contract FundMeTest is Test {
         assertEq(fundMe.i_owner(), address(this));
     }
 
+    // Need to spin up a local chain with a price feed to test this
     function testPriceFeedVersionIsAccurate() public {
         uint256 version = fundMe.getVersion();
         assertEq(version, 4);
